@@ -1,3 +1,5 @@
+// Been working on this all day and can't get it to calculate the correct values, can I have a push in the right direction?
+
 // helper function that takes a list of cities, a start city, our distance matrix, and a set used for memoization, to recursively find the shortest path
 function hk(cities, start, distance_matrix, memoization) {
     // number of cities in current call
