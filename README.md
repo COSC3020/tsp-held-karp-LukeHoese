@@ -41,6 +41,12 @@ returns the length of the shortest tour (not the tour itself).
 
 Test your new function; I've provided some basic testing code in `code.test.js`.
 
+Original version of code was written by me, and attempted to debug with chatGPT. Kept having issues so searched other students answers for someone who took a similar approach to the problem since the students I'm in contact with all used a different strategy. Eventually found DJReflexives implementation which used the same approached. Compared to see where issues were arising for me. Eventually found that my list generation for unmarked cities was the problem. Changed mine from a filter function to the iterative approach used by DJReflexive and got code working.
+
+In summary I used DJReflexives implementation to debug list generation, and ChatGPT very briefly to help with how best to store my memoization.
+
+All lines that had outside sources have been marked in comments within code.
+
 ## Runtime Analysis
 
 What is the worst-case asymptotic time complexity of your implementation? What
