@@ -72,7 +72,7 @@ function tsp_hk(distance_matrix) {
         return 0;
     }
     
-    // initialize our memoization object as an empty set
+    // initialize our memoization object as an empty object
     let memoization = {};
     // initialize variable to track shortest path
     let shortestPath = Infinity;
