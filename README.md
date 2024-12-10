@@ -54,3 +54,9 @@ I certify that I have listed all sources used to complete this exercise, includi
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+I was a bit lost on the asymptotic analysis of this so I consulted ChatGPT. I mostly just forgot everything I learned about subsets in my discrete class already and needed a refresher.
+
+The total time complexity of my implementation in $\Theta$(n<sup>2</sup> * 2<sup>n</sup>). This is found because our starting tsp_hk function calls the hk function $\Theta$(n) times, once for each possible starting city. The hk function itself is recursive, calling itself for every subset of the cities its called with, the number of subsets being 2<sup>n</sup>. For each subset we iterate over each city in it, meaning an aditional n times of work for hk. Thus our asymptotic complexity for hk is $\Theta$(n * 2<sup>n</sup>), which when called $\Theta$(n) times gives us our final complexity of $\Theta$(n<sup>2</sup> * 2<sup>n</sup>). 
+
+Note: because of our memoization we save time by returning repetitive recursive calls before they must do the n amount of work within, however the amount of recursive calls that do n work is still linear to n, so complexity doesnt change
